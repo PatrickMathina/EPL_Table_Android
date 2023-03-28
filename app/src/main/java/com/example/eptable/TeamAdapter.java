@@ -64,16 +64,17 @@ public class TeamAdapter extends BaseAdapter {
         imgV_last5_4.setImageResource(team.get(position).getLast5_4());
         imgV_last5_5.setImageResource(team.get(position).getLast5_5());
 
-        txtV_clubPosition.setText(team.get(position).getClubPosition());
+        txtV_clubPosition.setText(Integer.toString(team.get(position).getClubPosition()));
         txtV_clubName.setText(team.get(position).getClubName());
-        txtV_mp.setText(team.get(position).getMp());
-        txtV_w.setText(team.get(position).getW());
-        txtV_d.setText(team.get(position).getD());
-        txtV_l.setText(team.get(position).getL());
-        txtV_gf.setText(team.get(position).getGf());
-        txtV_ga.setText(team.get(position).getGa());
-        txtV_gd.setText(team.get(position).getGd());
-        txtV_pts.setText(team.get(position).getPts());
+
+        txtV_mp.setText(Integer.toString(team.get(position).getMp()));
+        txtV_w.setText(Integer.toString(team.get(position).getW()));
+        txtV_d.setText(Integer.toString(team.get(position).getD()));
+        txtV_l.setText(Integer.toString(team.get(position).getL()));
+        txtV_gf.setText(Integer.toString(team.get(position).getGf()));
+        txtV_ga.setText(Integer.toString(team.get(position).getGa()));
+        txtV_gd.setText(Integer.toString(team.get(position).getGd()));
+        txtV_pts.setText(Integer.toString(team.get(position).getPts()));
 
         return convertView;
     }

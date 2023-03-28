@@ -1,15 +1,14 @@
 package com.example.eptable;
 
 public class TeamModel {
-    private int teamLogo, last5_1, last5_2, last5_3, last5_4, last5_5;
-    private String clubPosition, clubName, mp, w, d, l, gf, ga, gd, pts;
+    private int clubPosition, teamLogo, mp, w, d, l, gf, ga, gd, pts, last5_1, last5_2, last5_3, last5_4, last5_5;
+    private String clubName;
 
-    public TeamModel(String clubPosition, int teamLogo, String clubName, String mp, String w, String d,
-                     String l, String gf, String ga, String gd, String pts, int last5_1, int last5_2,
-                     int last5_3, int last5_4, int last5_5) {
+    public TeamModel(int clubPosition, String clubName, int teamLogo, int mp, int w, int d, int l, int gf,
+                     int ga, int gd, int pts, int last5_1, int last5_2, int last5_3, int last5_4, int last5_5) {
         this.clubPosition = clubPosition;
-        this.teamLogo = teamLogo;
         this.clubName = clubName;
+        this.teamLogo = teamLogo;
         this.mp = mp;
         this.w = w;
         this.d = d;
@@ -26,17 +25,17 @@ public class TeamModel {
     }
 
     public TeamModel() {
-        this.clubPosition = "";
+        this.clubPosition = 0;
         this.teamLogo = 0;
         this.clubName = "";
-        this.mp = "";
-        this.w = "";
-        this.d = "";
-        this.l = "";
-        this.gf = "";
-        this.ga = "";
-        this.gd = "";
-        this.pts = "";
+        this.mp = 0;
+        this.w = 0;
+        this.d = 0;
+        this.l = 0;
+        this.gf = 0;
+        this.ga = 0;
+        this.gd = 0;
+        this.pts = 0;
         this.last5_1 = 0;
         this.last5_2 = 0;
         this.last5_3 = 0;
@@ -44,11 +43,13 @@ public class TeamModel {
         this.last5_5 = 0;
     }
 
-    public String getClubPosition() {
+    public int getClubPosition() {
+//        clubPosition = 0;
+//        clubPosition += 1;
         return clubPosition;
     }
 
-    public void setClubPosition(String clubPosition) {
+    public void setClubPosition(int clubPosition) {
         this.clubPosition = clubPosition;
     }
 
@@ -68,67 +69,67 @@ public class TeamModel {
         this.clubName = clubName;
     }
 
-    public String getMp() {
+    public int getMp() {
         return mp;
     }
 
-    public void setMp(String mp) {
+    public void setMp(int mp) {
         this.mp = mp;
     }
 
-    public String getW() {
+    public int getW() {
         return w;
     }
 
-    public void setW(String w) {
+    public void setW(int w) {
         this.w = w;
     }
 
-    public String getD() {
+    public int getD() {
         return d;
     }
 
-    public void setD(String d) {
+    public void setD(int d) {
         this.d = d;
     }
 
-    public String getL() {
+    public int getL() {
         return l;
     }
 
-    public void setL(String l) {
+    public void setL(int l) {
         this.l = l;
     }
 
-    public String getGf() {
+    public int getGf() {
         return gf;
     }
 
-    public void setGf(String gf) {
+    public void setGf(int gf) {
         this.gf = gf;
     }
 
-    public String getGa() {
+    public int getGa() {
         return ga;
     }
 
-    public void setGa(String ga) {
+    public void setGa(int ga) {
         this.ga = ga;
     }
 
-    public String getGd() {
-        return gd;
+    public int getGd() {
+        return getGf() - getGa();
     }
 
-    public void setGd(String gd) {
+    public void setGd(int gd) {
         this.gd = gd;
     }
 
-    public String getPts() {
-        return pts;
+    public int getPts() {
+        return (getW() * 3) + getD();
     }
 
-    public void setPts(String pts) {
+    public void setPts(int pts) {
         this.pts = pts;
     }
 
